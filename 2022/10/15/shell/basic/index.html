@@ -28,7 +28,7 @@
 <meta property="og:description" content="Bash Scripting BasicsAssignment and Substitution12a&#x3D;123b&#x3D;$a  Variables Butil-in Variables   $HOME $PWD $PATH for more info, see environ(7)  Positional Parameters  $0 $1 $2 $3 $4 $@ $* $#  Special Para">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-15T14:55:06.000Z">
-<meta property="article:modified_time" content="2022-10-17T14:39:25.459Z">
+<meta property="article:modified_time" content="2022-10-17T14:51:34.374Z">
 <meta property="article:author" content="grebeci">
 <meta property="article:tag" content="SHELL">
 <meta name="twitter:card" content="summary">
@@ -210,7 +210,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-10-17 22:39:25" itemprop="dateModified" datetime="2022-10-17T22:39:25+08:00">2022-10-17</time>
+      <time title="Modified: 2022-10-17 22:51:34" itemprop="dateModified" datetime="2022-10-17T22:51:34+08:00">2022-10-17</time>
     </span>
 
   
@@ -246,8 +246,6 @@
 <p><code>declare -A</code>可以声明关联数组。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">decalre -A wordcount</span><br><span class="line"><span class="comment"># Assignment  </span></span><br><span class="line">wordcount[<span class="string">&#x27;aaa&#x27;</span>]=1</span><br><span class="line">wordcount[<span class="string">&#x27;bbb&#x27;</span>]=2</span><br><span class="line"> <span class="comment"># or</span></span><br><span class="line">wordcount=([<span class="string">&#x27;aaa&#x27;</span>]=1 [<span class="string">&#x27;bbb&#x27;</span>]=2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#reference</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;wordcount[&#x27;name&#x27;]&#125;</span></span><br></pre></td></tr></table></figure>
 
-
-
 <h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><h5 id="1-substr"><a href="#1-substr" class="headerlink" title="1. substr"></a>1. substr</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$&#123;varname:offset:length&#125;</span> </span><br><span class="line"><span class="comment"># 返回变量$varname的子字符串，从位置offset开始（从0开始计算），长度为length.</span></span><br><span class="line"><span class="comment"># 注 ： offset为负值，表示从字符串的末尾开始算起。注意，负数前面必须有一个空格</span></span><br><span class="line"><span class="variable">$str</span>: -5：2&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h5 id="2-remove-substr"><a href="#2-remove-substr" class="headerlink" title="2. remove substr"></a>2. remove substr</h5><p>删除匹配的部分，返回剩下的部分</p>
@@ -258,8 +256,6 @@
 <h5 id="4-lenth"><a href="#4-lenth" class="headerlink" title="4. lenth"></a>4. lenth</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这些操作返回结果，不会改变字符串</span></span><br><span class="line"><span class="variable">$&#123;#varname&#125;</span> <span class="comment"># string length</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="5-upper-amp-lower"><a href="#5-upper-amp-lower" class="headerlink" title="5. upper &amp; lower"></a>5. upper &amp; lower</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 转为大写</span><br><span class="line">$&#123;varname^^&#125;</span><br><span class="line"># 转为小写</span><br><span class="line">$&#123;varname,,&#125;</span><br></pre></td></tr></table></figure>
-
-
 
 <h3 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h3><p>STDIN : 标准输入  0  &#x2F;dev&#x2F;stdin</p>
 <p>STDOUT: 标准输出  1  &#x2F;dev&#x2F;stdout</p>
@@ -272,13 +268,9 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ condition1 ];<span class="keyword">then</span> command_series1 ; <span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 
-
-
 <h5 id="case-command"><a href="#case-command" class="headerlink" title="case  command"></a>case  command</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="variable">$x</span> <span class="keyword">in</span></span><br><span class="line">	pattern1)</span><br><span class="line">  		;;</span><br><span class="line">  	pattern2)</span><br><span class="line">  		;;</span><br><span class="line">	*)</span><br><span class="line">     statementn</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="短路"><a href="#短路" class="headerlink" title="短路"></a>短路</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[[  ]] &amp;&amp; <span class="built_in">command</span>  <span class="comment"># if true then</span></span><br><span class="line">[[  ]] || <span class="built_in">command</span>  <span class="comment"># if false then</span></span><br></pre></td></tr></table></figure>
-
-
 
 <h3 id="Conditional-Expressions"><a href="#Conditional-Expressions" class="headerlink" title="Conditional Expressions"></a>Conditional Expressions</h3><p>详见 <a target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#Bash-Conditional-Expressions">Bash Conditional Expressions (Bash Reference Manual) ~ Bash条件表达式(Bash参考手册) (gnu.org)</a></p>
 <h6 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h6><p><code>[ ]</code> <code>[[  ]]</code> <code>test</code></p>
@@ -313,39 +305,25 @@
 
 <h5 id="4-and-or"><a href="#4-and-or" class="headerlink" title="4.and or"></a>4.and or</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ condition1 -a condition2 ]</span><br><span class="line">[ condition1 -o condition2 ]</span><br><span class="line"></span><br><span class="line">[[ condition1 &amp;&amp; condition2 ]]</span><br><span class="line">[[ condition1 || condition2 ]]</span><br></pre></td></tr></table></figure>
 
-
-
 <h3 id="Loops"><a href="#Loops" class="headerlink" title="Loops"></a>Loops</h3><h4 id="vars-like-for"><a href="#vars-like-for" class="headerlink" title="vars-like for"></a>vars-like for</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> arg1 arg2 arg3 ; <span class="keyword">do</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$arg</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> arg1 arg2 arg3; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">$arg</span>; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="range-for"><a href="#range-for" class="headerlink" title="range for"></a>range for</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> `<span class="built_in">seq</span> 10`; <span class="keyword">do</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$arg</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">seq</span> 1 3 10   <span class="comment">#generate sequence  ， 使用空格分开的序列字符串</span></span><br><span class="line"><span class="built_in">echo</span> &#123;1..10..1&#125; <span class="comment">#  generate sequence  </span></span><br><span class="line">array=($(<span class="built_in">seq</span> 10)) <span class="comment"># 转成 array</span></span><br></pre></td></tr></table></figure>
 
-
-
 <h4 id="for-in-C-like-syntax"><a href="#for-in-C-like-syntax" class="headerlink" title="for in C-like syntax"></a>for in C-like syntax</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">LIMIT=10</span><br><span class="line"><span class="keyword">for</span> ((a=1; a&lt;=LIMIT; a++)); <span class="keyword">do</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$a</span> &quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-
-
 
 <h4 id="while"><a href="#while" class="headerlink" title="while"></a><strong>while</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">LIMIT=10</span><br><span class="line">a=1</span><br><span class="line"><span class="keyword">while</span> ((a&lt;=LIMIT)); <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$a</span> &quot;</span></span><br><span class="line">    ((a += 1))</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
-
-
 <h4 id="until"><a href="#until" class="headerlink" title="until"></a><strong>until</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">LIMIT=10</span><br><span class="line">a=1</span><br><span class="line">util ((a &gt; LIMIT)); <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$a</span> &quot;</span></span><br><span class="line">    ((a += 1))</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
-
-
 <h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># define a function</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun_name</span></span>()&#123;</span><br><span class="line">    <span class="built_in">command</span>...</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">## or</span></span><br><span class="line"><span class="function"><span class="title">fun_name</span></span>()&#123; <span class="comment"># arg1 arg2 arg3</span></span><br><span class="line">    <span class="built_in">command</span>...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># apply a function</span></span><br><span class="line">fun_name <span class="variable">$arg1</span> <span class="variable">$arg2</span> <span class="variable">$arg3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># dereference</span></span><br><span class="line"><span class="function"><span class="title">fun_name</span></span>()&#123; <span class="comment"># arg1</span></span><br><span class="line">    <span class="built_in">eval</span> <span class="string">&quot;<span class="variable">$1</span>=hello&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">fun_name arg1</span><br><span class="line"><span class="comment">## the above code block is equivalent to </span></span><br><span class="line">arg1=hello</span><br></pre></td></tr></table></figure>
-
-
 
 <h3 id="Fork"><a href="#Fork" class="headerlink" title="Fork"></a>Fork</h3><p>子进程 <code>command</code> (command)</p>
 <p>注：子shell exit失效，管道也会开启子shell</p>
 <h3 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h3><h5 id="1-连续执行n条命令"><a href="#1-连续执行n条命令" class="headerlink" title="1. 连续执行n条命令  {} ()"></a>1. 连续执行n条命令  {} ()</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（command1;command2) <span class="comment"># 开启子shell 执行</span></span><br><span class="line"></span><br><span class="line">&#123; command1;command2;&#125; <span class="comment"># 在当前shell 执行，开始空格，结尾分号</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="2-后台执行"><a href="#2-后台执行" class="headerlink" title="2. 后台执行"></a>2. 后台执行</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">nohup</span> <span class="built_in">command</span> &gt; <span class="built_in">log</span> 2&gt;&amp;1 </span><br></pre></td></tr></table></figure>
-
-
 
 <h3 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h3><ol>
 <li>take good use of sh(1)<br> for example:<br> sh -n script: checks for syntax<br> sh -v script: echo each command before executing it<br> sh -x script: echo the result of each command in an abbreviated manner</li>
