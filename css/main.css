@@ -1467,6 +1467,7 @@ header.header {
   line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .post-toc .nav .nav-child {
   display: none;
@@ -2652,7 +2653,7 @@ hr {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #fff;
+  background: #08ee1f;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
