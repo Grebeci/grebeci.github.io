@@ -197,7 +197,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-18 15:17:12 / Modified: 15:40:10" itemprop="dateCreated datePublished" datetime="2022-10-18T15:17:12+08:00">2022-10-18</time>
+      <time title="Created: 2022-10-18 15:17:12 / Modified: 15:43:56" itemprop="dateCreated datePublished" datetime="2022-10-18T15:17:12+08:00">2022-10-18</time>
     </span>
 
   
@@ -213,17 +213,10 @@
           <h3 id="Assignment-and-Substitution"><a href="#Assignment-and-Substitution" class="headerlink" title="Assignment and Substitution"></a>Assignment and Substitution</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=123</span><br><span class="line">b=<span class="variable">$a</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><ol>
-<li><p>Butil-in Variables<br><code>$HOME $PWD $PATH</code> for more info, see <a href="https://link.zhihu.com/?target=https://man7.org/linux/man-pages/man7/environ.7.html">environ(7)</a></p>
-</li>
-<li><p>Positional Parameters<br><code>$0 $1 $2 $3 $4 $@ $* $#</code></p>
-</li>
-<li><p>Special Parameters<br><code>$? </code># exit status of a command, function, or the script itself</p>
-<pre><code>`$$` # 当前进程的pid
-`$! `# 后台运行的最后一个进程pid
-</code></pre>
-</li>
-<li><p>env</p>
-</li>
+<li>Butil-in Variables<br><code>$HOME $PWD $PATH</code> for more info, see <a href="https://link.zhihu.com/?target=https://man7.org/linux/man-pages/man7/environ.7.html">environ(7)</a></li>
+<li>Positional Parameters<br><code>$0 $1 $2 $3 $4 $@ $* $#</code></li>
+<li>Special Parameters<br><code>$? </code># exit status of a command, function, or the script itself<br><code>$$</code> # 当前进程的 pid<br><code>$! </code># 后台运行的最后一个进程 pid</li>
+<li>env</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defined :<span class="built_in">export</span> var=<span class="string">&#x27;123&#x27;</span></span><br><span class="line"><span class="built_in">print</span>:  <span class="built_in">env</span> | grep <span class="string">&#x27;HOME&#x27;</span></span><br></pre></td></tr></table></figure>
 
@@ -384,7 +377,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-10-18 15:39:24" itemprop="dateModified" datetime="2022-10-18T15:39:24+08:00">2022-10-18</time>
+      <time title="Modified: 2022-10-18 15:43:09" itemprop="dateModified" datetime="2022-10-18T15:43:09+08:00">2022-10-18</time>
     </span>
 
   
