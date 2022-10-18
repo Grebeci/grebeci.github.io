@@ -20,19 +20,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"grebeci.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Assignment and Substitution12a&#x3D;123b&#x3D;$a  Variables Butil-in Variables$HOME $PWD $PATH for more info, see environ(7) Positional Parameters$0 $1 $2 $3 $4 $@ $* $# Special Parameters$? # exit status of a">
+    <meta name="description" content="Assignment and Substitution12a&#x3D;123b&#x3D;$a  Variables Butil-in Variables$HOME $PWD $PATH for more info, see environ(7)  Positional Parameters$0 $1 $2 $3 $4 $@ $* $#  Special Parameters$? # exit status of">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shell Basic">
 <meta property="og:url" content="https://grebeci.github.io/2022/10/18/yuque/Shell%20Basic/index.html">
 <meta property="og:site_name" content="snippet">
-<meta property="og:description" content="Assignment and Substitution12a&#x3D;123b&#x3D;$a  Variables Butil-in Variables$HOME $PWD $PATH for more info, see environ(7) Positional Parameters$0 $1 $2 $3 $4 $@ $* $# Special Parameters$? # exit status of a">
+<meta property="og:description" content="Assignment and Substitution12a&#x3D;123b&#x3D;$a  Variables Butil-in Variables$HOME $PWD $PATH for more info, see environ(7)  Positional Parameters$0 $1 $2 $3 $4 $@ $* $#  Special Parameters$? # exit status of">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://g.yuque.com/gr/latex?%20%23%20%E5%BD%93%E5%89%8D%E8%BF%9B%E7%A8%8B%E7%9A%84pid%0A%0A#card=math&code=%20%23%20%E5%BD%93%E5%89%8D%E8%BF%9B%E7%A8%8B%E7%9A%84pid%0A%0A&id=aJa1h">
 <meta property="article:published_time" content="2022-10-18T07:17:12.000Z">
-<meta property="article:modified_time" content="2022-10-18T07:32:18.951Z">
+<meta property="article:modified_time" content="2022-10-18T07:40:10.139Z">
 <meta property="article:author" content="grebeci">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://g.yuque.com/gr/latex?%20%23%20%E5%BD%93%E5%89%8D%E8%BF%9B%E7%A8%8B%E7%9A%84pid%0A%0A#card=math&code=%20%23%20%E5%BD%93%E5%89%8D%E8%BF%9B%E7%A8%8B%E7%9A%84pid%0A%0A&id=aJa1h">
 
 
 <link rel="canonical" href="https://grebeci.github.io/2022/10/18/yuque/Shell%20Basic/">
@@ -205,7 +203,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-18 15:17:12 / Modified: 15:32:18" itemprop="dateCreated datePublished" datetime="2022-10-18T15:17:12+08:00">2022-10-18</time>
+      <time title="Created: 2022-10-18 15:17:12 / Modified: 15:40:10" itemprop="dateCreated datePublished" datetime="2022-10-18T15:17:12+08:00">2022-10-18</time>
     </span>
 
   
@@ -221,10 +219,17 @@
         <h3 id="Assignment-and-Substitution"><a href="#Assignment-and-Substitution" class="headerlink" title="Assignment and Substitution"></a>Assignment and Substitution</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=123</span><br><span class="line">b=<span class="variable">$a</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><ol>
-<li>Butil-in Variables<br><code>$HOME $PWD $PATH</code> for more info, see <a href="https://link.zhihu.com/?target=https://man7.org/linux/man-pages/man7/environ.7.html">environ(7)</a></li>
-<li>Positional Parameters<br><code>$0 $1 $2 $3 $4 $@ $* $#</code></li>
-<li>Special Parameters<br>$? # exit status of a command, function, or the script itself <img src="https://g.yuque.com/gr/latex?%20%23%20%E5%BD%93%E5%89%8D%E8%BF%9B%E7%A8%8B%E7%9A%84pid%0A%0A#card=math&code=%20%23%20%E5%BD%93%E5%89%8D%E8%BF%9B%E7%A8%8B%E7%9A%84pid%0A%0A&id=aJa1h"></li>
-<li>env</li>
+<li><p>Butil-in Variables<br><code>$HOME $PWD $PATH</code> for more info, see <a href="https://link.zhihu.com/?target=https://man7.org/linux/man-pages/man7/environ.7.html">environ(7)</a></p>
+</li>
+<li><p>Positional Parameters<br><code>$0 $1 $2 $3 $4 $@ $* $#</code></p>
+</li>
+<li><p>Special Parameters<br><code>$? </code># exit status of a command, function, or the script itself</p>
+<pre><code>`$$` # 当前进程的pid
+`$! `# 后台运行的最后一个进程pid
+</code></pre>
+</li>
+<li><p>env</p>
+</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defined :<span class="built_in">export</span> var=<span class="string">&#x27;123&#x27;</span></span><br><span class="line"><span class="built_in">print</span>:  <span class="built_in">env</span> | grep <span class="string">&#x27;HOME&#x27;</span></span><br></pre></td></tr></table></figure>
 
