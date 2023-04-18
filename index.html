@@ -167,7 +167,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://grebeci.github.io/2023/04/18/yuque/%E6%B5%8B%E8%AF%95%E8%AF%AD%E9%9B%80=%E3%80%8Bhexo%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7/">
+    <link itemprop="mainEntityOfPage" href="https://grebeci.github.io/2023/04/18/yuque/%E6%97%A0%E6%A0%87%E9%A2%98%E6%96%87%E6%A1%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -185,7 +185,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/18/yuque/%E6%B5%8B%E8%AF%95%E8%AF%AD%E9%9B%80=%E3%80%8Bhexo%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7/" class="post-title-link" itemprop="url">测试语雀=》hexo的可行性</a>
+          <a href="/2023/04/18/yuque/%E6%97%A0%E6%A0%87%E9%A2%98%E6%96%87%E6%A1%A3/" class="post-title-link" itemprop="url">无标题文档</a>
         </h2>
 
         <div class="post-meta-container">
@@ -197,7 +197,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-18 14:47:02 / Modified: 14:48:23" itemprop="dateCreated datePublished" datetime="2023-04-18T14:47:02+08:00">2023-04-18</time>
+      <time title="Created: 2023-04-18 18:07:01 / Modified: 18:19:52" itemprop="dateCreated datePublished" datetime="2023-04-18T18:07:01+08:00">2023-04-18</time>
     </span>
 
   
@@ -210,7 +210,41 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>简单测试下语雀的 api 的可行性</p>
+          <p>发现** new bing **在 **中文 **和 <strong>英文</strong> 语境下的表现明显不同</p>
+<p>看 《spark 快速大数据分析第二版》   时候看到一段话</p>
+<blockquote>
+<p>Dataset 主要区分两种特性：有类型和无类型 。 Scala 中的每个 Dataset 都有一个无类型的版本——DataFrame，后者是 由 Row 对象组成的 Dataset。</p>
+</blockquote>
+<p>按照它的意思，DataFrame 可以看作 <code>DataSet[Row]</code> ，那说明 DataFrame 的类型是 Row，为什么没有类型呢？求助 bing</p>
+<h2 id="英文下"><a href="#英文下" class="headerlink" title="英文下"></a>英文下</h2><p><img src="https://cdn.nlark.com/yuque/0/2023/png/33625018/1681812879128-588ad389-769e-49b0-9af5-0dd9596a2791.png#averageHue=%23dcebef&clientId=u2fe70fe7-ce06-4&from=drop&id=u38e45393&name=Pasted%20image%2020230418041130.png&originHeight=1243&originWidth=1446&originalType=binary%E2%88%B6=1.5&rotation=0&showTitle=false&size=387420&status=done&style=none&taskId=uf4638647-72a3-4b23-bf81-a3cd9fc1d20&title=" alt="Pasted image 20230418041130.png"></p>
+<h5 id="他开始搜索，然后生成答案"><a href="#他开始搜索，然后生成答案" class="headerlink" title="他开始搜索，然后生成答案"></a>他开始搜索，然后生成答案</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正在搜索 spark dataframe untyped</span><br></pre></td></tr></table></figure>
+
+<p>他搜到了三个链接：<br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/54714447/dataframes-and-datasets-in-spark">Dataframes and Datasets in Spark - Stack Overflow</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/40506940/spark-datasets-strong-typing">Spark Datasets - strong typing - Stack Overflow</a><br><a target="_blank" rel="noopener" href="https://blog.knoldus.com/spark-type-safety-in-dataset-vs-dataframe/">https://blog.knoldus.com/spark-type-safety-in-dataset-vs-dataframe/</a></p>
+<p>其中，第二个链接提到了一个问题：</p>
+<blockquote>
+<p>If, <em>Dataframe</em> is actually <em>Dataset[Row]</em> why is <em>Dataframe</em> called untyped? Isnt the type here supposed to be <em>Row</em> [defined <a target="_blank" rel="noopener" href="https://spark.apache.org/docs/2.1.0/api/java/org/apache/spark/sql/Row.html">here</a>]?</p>
+</blockquote>
+<p>基本和我问的差不多，new bing 准确归纳了链接的所有答案，从编译时和运行时对类型的处理的角度来解释问题。</p>
+<h5 id="追问-类型参数化的含义"><a href="#追问-类型参数化的含义" class="headerlink" title="追问 类型参数化的含义"></a>追问 类型参数化的含义</h5><p>他已经不用搜索了， 准确给出了在这个语境下的含义，甚至结合了例子进行解答</p>
+<h5 id="回到问题，解释-row-类型不能进行类型参数化的原因"><a href="#回到问题，解释-row-类型不能进行类型参数化的原因" class="headerlink" title="回到问题，解释 row 类型不能进行类型参数化的原因"></a>回到问题，解释 row 类型不能进行类型参数化的原因</h5><p>回答了问题后，甚至联系第一个问题，说明 <strong>row 类型不能被编译器类型参数化</strong> 对 dataframe 的影响。<br>至此，已经回答的很清晰了。</p>
+<h2 id="中文下"><a href="#中文下" class="headerlink" title="中文下"></a>中文下</h2><p><img src="https://cdn.nlark.com/yuque/0/2023/png/33625018/1681812900543-bd402891-3394-4ade-89ae-e2cb76493214.png#averageHue=%23dcebef&clientId=u2fe70fe7-ce06-4&from=drop&id=u02e2b8bc&name=Pasted%20image%2020230418043300.png&originHeight=1662&originWidth=1233&originalType=binary%E2%88%B6=1.5&rotation=0&showTitle=false&size=464908&status=done&style=none&taskId=uae67ec43-35f9-467b-a082-8a7ede7d6c0&title=" alt="Pasted image 20230418043300.png"></p>
+<h5 id="他开始搜索，"><a href="#他开始搜索，" class="headerlink" title="他开始搜索，"></a>他开始搜索，</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">spark dataframe 无类型row 类型</span><br><span class="line">spark dataframe 无类型</span><br></pre></td></tr></table></figure>
+
+<p>得到 7 个链接</p>
+<p>(1) spark 进阶（五）：DataFrame 和 DataSet 使用 - CSDN 博客. <a target="_blank" rel="noopener" href="https://blog.csdn.net/tonydz0523/article/details/120635568">https://blog.csdn.net/tonydz0523/article/details/120635568</a><br>(2) Spark 之 Row<em>spark 中的 row_SunnyRivers 的博客-CSDN 博客. <a target="_blank" rel="noopener" href="https://blog.csdn.net/Android_xue/article/details/102825672">https://blog.csdn.net/Android_xue&#x2F;article&#x2F;details&#x2F;102825672</a><br>(3) Spark DF:关于 Row 中的数值获取问题</em>冽夫的博客-CSDN 博客. <a target="_blank" rel="noopener" href="https://blog.csdn.net/helloworld0906/article/details/108966919">https://blog.csdn.net/helloworld0906/article/details/108966919</a><br>(4) 【spark 源码系列】pyspark.sql.Row 介绍和使用示例 - CSDN 博客. <a target="_blank" rel="noopener" href="https://blog.csdn.net/helloxiaozhe/article/details/103443028">https://blog.csdn.net/helloxiaozhe/article/details/103443028</a><br>(5) Spark SQL, DataFrame 和 Dataset 编程指南 — Spark 2.2.x 中文文档 2.2.1 文档. <a target="_blank" rel="noopener" href="http://spark-reference-doc-cn.readthedocs.io/zh_CN/latest/programming-guide/sql-guide.html">http://spark-reference-doc-cn.readthedocs.io/zh_CN&#x2F;latest&#x2F;programming-guide&#x2F;sql-guide.html</a><br>(6) Spark 学习之 Dataset (DataFrame) 的基础操作 - xppp11 - 博客园. <a target="_blank" rel="noopener" href="https://www.cnblogs.com/xp-thebest/p/14300479.html">https://www.cnblogs.com/xp-thebest/p/14300479.html</a><br>(7) Spark Dataset (DataFrame) 常见操作 - CSDN 博客. <a target="_blank" rel="noopener" href="https://blog.csdn.net/justlpf/article/details/113102628">https://blog.csdn.net/justlpf/article/details/113102628</a></p>
+<p>链接 (1), (4), (6),(7) 都是使用 API 的 <strong>练习记录</strong> ， (2) 提到了自己对 Row 的理解，泛泛而谈而已。<br>只有 <strong>(5)</strong>   是对 spark 官方文档的翻译，里面有对 dataframe 和 dataset 概念的解释，不幸的是，这个 get-starting 性质的，没有深入理解</p>
+<p>因此他的回答先解释了 dataframe 概念，然后解析了是相对于 Dataset 使用强类型的原因，这也是官方文档提到的。</p>
+<h5 id="尝试提示它从编译和运行的角度回答"><a href="#尝试提示它从编译和运行的角度回答" class="headerlink" title="尝试提示它从编译和运行的角度回答"></a>尝试提示它从编译和运行的角度回答</h5><p>bing 的回答已经靠谱了，但是还是重复 SQL 优化器相关的答案，虽然这和问题相关性不大。。。</p>
+<p>注意到第一个问题它搜索的是 <code>spark dataframe 无类型</code> ， 看来 <code>无类型</code> 这个 prompts 或者 keyword 已经不行了，用 untype 的 prompts 来触发它。</p>
+<p>然后它回答的已经靠谱了，提到了 dataframe 无法确定每一列的类型（和类型参数化意思差不多）</p>
+<h5 id="继续追问-类型参数化的问题"><a href="#继续追问-类型参数化的问题" class="headerlink" title="继续追问 类型参数化的问题"></a>继续追问 类型参数化的问题</h5><p>虽然 bing 解释清楚了，但是并没有像英文结合例子来解释</p>
+<h5 id="结合-Row-类型来解释类型参数化对-dataframe-影响"><a href="#结合-Row-类型来解释类型参数化对-dataframe-影响" class="headerlink" title="结合 Row 类型来解释类型参数化对 dataframe 影响"></a>结合 Row 类型来解释类型参数化对 dataframe 影响</h5><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>暂时认为 new bing 是一个根据搜索引擎搜索的内容，然后自动归纳的工具，他的质量取决于：</p>
+<ul>
+<li>第一次搜索的 keyword 是否能准确的命中问题，这次搜索为后续的回答提供一个 <code>上下文语境</code> ，这个基本决定了后续回答的质量 。</li>
+<li>keyword 和 prompts 非常重要，基本决定了话题的方向和答案的准确程度。</li>
+<li>中文搜索受语料不足的影响。csdn 都是转载和练习的记录，搜索到博客园内容也很少。</li>
+<li>stackOverFlow 有完善的问题链接，new bing 能很好的把他们归纳在一起进行解释。</li>
+</ul>
 
       
     </div>
@@ -273,7 +307,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-18 14:48:23" itemprop="dateModified" datetime="2023-04-18T14:48:23+08:00">2023-04-18</time>
+      <time title="Modified: 2023-04-18 18:19:52" itemprop="dateModified" datetime="2023-04-18T18:19:52+08:00">2023-04-18</time>
     </span>
 
   
@@ -453,7 +487,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-18 14:47:48" itemprop="dateModified" datetime="2023-04-18T14:47:48+08:00">2023-04-18</time>
+      <time title="Modified: 2023-04-18 18:19:15" itemprop="dateModified" datetime="2023-04-18T18:19:15+08:00">2023-04-18</time>
     </span>
 
   
