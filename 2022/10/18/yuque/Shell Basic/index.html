@@ -28,7 +28,7 @@
 <meta property="og:description" content="Assignment and Substitution12a&#x3D;123b&#x3D;$a  Variables Butil-in Variables$HOME $PWD $PATH for more info, see environ(7) Positional Parameters$0 $1 $2 $3 $4 $@ $* $# Special Parameters$? # exit status of a">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-18T07:17:12.000Z">
-<meta property="article:modified_time" content="2023-08-06T06:12:45.235Z">
+<meta property="article:modified_time" content="2024-04-18T13:35:10.722Z">
 <meta property="article:author" content="grebeci">
 <meta name="twitter:card" content="summary">
 
@@ -209,7 +209,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-08-06 14:12:45" itemprop="dateModified" datetime="2023-08-06T14:12:45+08:00">2023-08-06</time>
+      <time title="Modified: 2024-04-18 21:35:10" itemprop="dateModified" datetime="2024-04-18T21:35:10+08:00">2024-04-18</time>
     </span>
 
   
@@ -246,7 +246,7 @@
 
 <h4 id="4-lenth"><a href="#4-lenth" class="headerlink" title="4. lenth"></a>4. lenth</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这些操作返回结果，不会改变字符串</span></span><br><span class="line"><span class="variable">$&#123;#varname&#125;</span> <span class="comment"># string length</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="5-upper-amp-lower"><a href="#5-upper-amp-lower" class="headerlink" title="5. upper &amp; lower"></a>5. upper &amp; lower</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 转为大写</span><br><span class="line">$&#123;varname^^&#125;</span><br><span class="line"># 转为小写</span><br><span class="line">$&#123;varname,,&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-upper-lower"><a href="#5-upper-lower" class="headerlink" title="5. upper &amp; lower"></a>5. upper &amp; lower</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 转为大写</span><br><span class="line">$&#123;varname^^&#125;</span><br><span class="line"># 转为小写</span><br><span class="line">$&#123;varname,,&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h3><p>STDIN : 标准输入  0  &#x2F;dev&#x2F;stdin</p>
 <p>STDOUT: 标准输出  1  &#x2F;dev&#x2F;stdout</p>
@@ -284,7 +284,7 @@
 <p>file modified time</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[ file1 -nt file2 ] <span class="comment"># file1 new time</span></span><br><span class="line">[ file1 -ot file2 ] <span class="comment"># file1 old time</span></span><br><span class="line">[ file1 -ef file2 ] <span class="comment"># inode equal =&gt; softlink -&gt; file</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="2-number-amp-string"><a href="#2-number-amp-string" class="headerlink" title="2. number &amp; string"></a>2. number &amp; string</h4><p>整数比较<br><code>-eq  -ne -gt -lt -ge -le</code><br>字符串</p>
+<h4 id="2-number-string"><a href="#2-number-string" class="headerlink" title="2. number &amp; string"></a>2. number &amp; string</h4><p>整数比较<br><code>-eq  -ne -gt -lt -ge -le</code><br>字符串</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-z -n == != &gt; &lt;</span><br></pre></td></tr></table></figure>
 
 <p>注： <code>&lt;</code> <code>&gt;</code> 只用于字符串字典序比较，且在 <code>[[ ]]</code> 无需转义 ， 在 <code>[ ]</code> 需要转义</p>
@@ -368,7 +368,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

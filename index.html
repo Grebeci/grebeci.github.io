@@ -195,9 +195,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-08-06 14:03:38 / Modified: 14:12:45" itemprop="dateCreated datePublished" datetime="2023-08-06T14:03:38+08:00">2023-08-06</time>
+      <time title="Created: 2023-08-06 14:03:38" itemprop="dateCreated datePublished" datetime="2023-08-06T14:03:38+08:00">2023-08-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-04-18 21:35:10" itemprop="dateModified" datetime="2024-04-18T21:35:10+08:00">2024-04-18</time>
     </span>
 
   
@@ -261,17 +267,7 @@
 </li>
 </ul>
 </li>
-<li>快捷键<ul>
-<li>修改文件名</li>
-<li>运行命令<ul>
-<li>用命令快速 <strong>计算器</strong></li>
-<li>打开控制面板</li>
-<li>删除文件、撤销删除</li>
-<li></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><h2 id="快捷键-修改文件名-运行命令-用命令快速-计算器-打开控制面板-删除文件、撤销删除"><a href="#快捷键-修改文件名-运行命令-用命令快速-计算器-打开控制面板-删除文件、撤销删除" class="headerlink" title="快捷键- 修改文件名- 运行命令  - 用命令快速 计算器  - 打开控制面板  - 删除文件、撤销删除"></a>快捷键<br>- 修改文件名<br>- 运行命令<br>  - 用命令快速 <strong>计算器</strong><br>  - 打开控制面板<br>  - 删除文件、撤销删除</h2></li>
 </ul>
 <h5 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h5><ul>
 <li>windows10 是自带截图的，怎么使用 windows 截图功能<ul>
@@ -405,7 +401,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-08-06 14:12:45" itemprop="dateModified" datetime="2023-08-06T14:12:45+08:00">2023-08-06</time>
+      <time title="Modified: 2024-04-18 21:35:10" itemprop="dateModified" datetime="2024-04-18T21:35:10+08:00">2024-04-18</time>
     </span>
 
   
@@ -513,7 +509,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-08-06 14:12:45" itemprop="dateModified" datetime="2023-08-06T14:12:45+08:00">2023-08-06</time>
+      <time title="Modified: 2024-04-18 21:35:10" itemprop="dateModified" datetime="2024-04-18T21:35:10+08:00">2024-04-18</time>
     </span>
 
   
@@ -550,7 +546,7 @@
 
 <h4 id="4-lenth"><a href="#4-lenth" class="headerlink" title="4. lenth"></a>4. lenth</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这些操作返回结果，不会改变字符串</span></span><br><span class="line"><span class="variable">$&#123;#varname&#125;</span> <span class="comment"># string length</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="5-upper-amp-lower"><a href="#5-upper-amp-lower" class="headerlink" title="5. upper &amp; lower"></a>5. upper &amp; lower</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 转为大写</span><br><span class="line">$&#123;varname^^&#125;</span><br><span class="line"># 转为小写</span><br><span class="line">$&#123;varname,,&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-upper-lower"><a href="#5-upper-lower" class="headerlink" title="5. upper &amp; lower"></a>5. upper &amp; lower</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 转为大写</span><br><span class="line">$&#123;varname^^&#125;</span><br><span class="line"># 转为小写</span><br><span class="line">$&#123;varname,,&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h3><p>STDIN : 标准输入  0  &#x2F;dev&#x2F;stdin</p>
 <p>STDOUT: 标准输出  1  &#x2F;dev&#x2F;stdout</p>
@@ -588,7 +584,7 @@
 <p>file modified time</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[ file1 -nt file2 ] <span class="comment"># file1 new time</span></span><br><span class="line">[ file1 -ot file2 ] <span class="comment"># file1 old time</span></span><br><span class="line">[ file1 -ef file2 ] <span class="comment"># inode equal =&gt; softlink -&gt; file</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="2-number-amp-string"><a href="#2-number-amp-string" class="headerlink" title="2. number &amp; string"></a>2. number &amp; string</h4><p>整数比较<br><code>-eq  -ne -gt -lt -ge -le</code><br>字符串</p>
+<h4 id="2-number-string"><a href="#2-number-string" class="headerlink" title="2. number &amp; string"></a>2. number &amp; string</h4><p>整数比较<br><code>-eq  -ne -gt -lt -ge -le</code><br>字符串</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-z -n == != &gt; &lt;</span><br></pre></td></tr></table></figure>
 
 <p>注： <code>&lt;</code> <code>&gt;</code> 只用于字符串字典序比较，且在 <code>[[ ]]</code> 无需转义 ， 在 <code>[ ]</code> 需要转义</p>
@@ -693,7 +689,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-08-06 14:12:02" itemprop="dateModified" datetime="2023-08-06T14:12:02+08:00">2023-08-06</time>
+      <time title="Modified: 2024-04-18 21:34:34" itemprop="dateModified" datetime="2024-04-18T21:34:34+08:00">2024-04-18</time>
     </span>
 
   
@@ -738,7 +734,7 @@
 
 <h5 id="4-lenth"><a href="#4-lenth" class="headerlink" title="4. lenth"></a>4. lenth</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这些操作返回结果，不会改变字符串</span></span><br><span class="line"><span class="variable">$&#123;#varname&#125;</span> <span class="comment"># string length</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="5-upper-amp-lower"><a href="#5-upper-amp-lower" class="headerlink" title="5. upper &amp; lower"></a>5. upper &amp; lower</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 转为大写</span><br><span class="line">$&#123;varname^^&#125;</span><br><span class="line"># 转为小写</span><br><span class="line">$&#123;varname,,&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="5-upper-lower"><a href="#5-upper-lower" class="headerlink" title="5. upper &amp; lower"></a>5. upper &amp; lower</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 转为大写</span><br><span class="line">$&#123;varname^^&#125;</span><br><span class="line"># 转为小写</span><br><span class="line">$&#123;varname,,&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h3><p>STDIN : 标准输入  0  &#x2F;dev&#x2F;stdin</p>
 <p>STDOUT: 标准输出  1  &#x2F;dev&#x2F;stdout</p>
@@ -777,7 +773,7 @@
 <p>file modified time</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[ file1 -nt file2 ] <span class="comment"># file1 new time</span></span><br><span class="line">[ file1 -ot file2 ] <span class="comment"># file1 old time</span></span><br><span class="line">[ file1 -ef file2 ] <span class="comment"># inode equal =&gt; softlink -&gt; file</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="2-number-amp-string"><a href="#2-number-amp-string" class="headerlink" title="2. number &amp; string"></a>2. number &amp; string</h5><p>整数比较</p>
+<h5 id="2-number-string"><a href="#2-number-string" class="headerlink" title="2. number &amp; string"></a>2. number &amp; string</h5><p>整数比较</p>
 <p>-eq  -ne -gt -lt -ge -le </p>
 <p>字符串</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-z -n == != &gt; &lt;</span><br></pre></td></tr></table></figure>
@@ -851,7 +847,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
